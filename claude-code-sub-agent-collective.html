@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude Code Sub-Agent Collective - 项目介绍</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 60px 0;
+            color: white;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+        
+        .github-link {
+            display: inline-block;
+            padding: 12px 24px;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            border: 2px solid rgba(255,255,255,0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .github-link:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+        
+        .content {
+            background: white;
+            border-radius: 20px;
+            padding: 60px;
+            margin: -30px 0 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .section {
+            margin-bottom: 50px;
+        }
+        
+        h2 {
+            color: #667eea;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            color: #764ba2;
+            font-size: 1.8rem;
+            margin: 30px 0 15px;
+        }
+        
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        .feature-card {
+            background: #f8f9ff;
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 5px solid #667eea;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-card h4 {
+            color: #667eea;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+        
+        .code-block {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 20px;
+            border-radius: 10px;
+            overflow-x: auto;
+            margin: 20px 0;
+            font-family: 'Monaco', 'Menlo', monospace;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        
+        .tech-tag {
+            background: #667eea;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .architecture-diagram {
+            background: #f8f9ff;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .architecture-diagram svg {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: white;
+        }
+        
+        .note {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .content {
+                padding: 30px 20px;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Claude Code Sub-Agent Collective</h1>
+            <p class="subtitle">基于Claude Code的智能子代理集体系统</p>
+            <a href="https://github.com/vanzan01/claude-code-sub-agent-collective" class="github-link">
+                📂 访问GitHub仓库
+            </a>
+        </header>
+        
+        <div class="content">
+            <div class="section">
+                <h2>📖 项目概述</h2>
+                <p>
+                    Claude Code Sub-Agent Collective 是一个创新的项目，旨在通过构建智能子代理集体来扩展Claude Code的功能。
+                    该项目探索了如何将多个专门的AI代理组织起来，协同工作以解决复杂的编程任务。
+                </p>
+                <div class="note">
+                    <strong>⚠️ 注意：</strong>由于网络限制，部分内容可能需要直接访问GitHub仓库获取最新信息。
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>🎯 核心特性</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>🤖 智能子代理</h4>
+                        <p>每个子代理都专注于特定的编程领域，如代码分析、调试、重构等，提供专业化的服务。</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🔄 协同工作</h4>
+                        <p>子代理之间可以相互协作，共享信息和结果，形成集体智能来解决复杂问题。</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🎛️ 任务分配</h4>
+                        <p>智能任务分配系统，根据任务类型和复杂度自动选择最合适的子代理组合。</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>📊 性能监控</h4>
+                        <p>实时监控各个子代理的性能表现，优化整体系统的效率。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>🏗️ 技术架构</h2>
+                <div class="architecture-diagram">
+                    <h3>系统架构图</h3>
+                    <svg width="800" height="400" viewBox="0 0 800 400">
+                        <!-- 主控制器 -->
+                        <rect x="300" y="20" width="200" height="60" rx="10" fill="#667eea"/>
+                        <text x="400" y="55" text-anchor="middle" fill="white" font-size="16">主控制器</text>
+                        
+                        <!-- 子代理层 -->
+                        <rect x="50" y="150" width="120" height="50" rx="8" fill="#764ba2"/>
+                        <text x="110" y="180" text-anchor="middle" fill="white" font-size="14">代码分析代理</text>
+                        
+                        <rect x="200" y="150" width="120" height="50" rx="8" fill="#764ba2"/>
+                        <text x="260" y="180" text-anchor="middle" fill="white" font-size="14">调试代理</text>
+                        
+                        <rect x="350" y="150" width="120" height="50" rx="8" fill="#764ba2"/>
+                        <text x="410" y="180" text-anchor="middle" fill="white" font-size="14">重构代理</text>
+                        
+                        <rect x="500" y="150" width="120" height="50" rx="8" fill="#764ba2"/>
+                        <text x="560" y="180" text-anchor="middle" fill="white" font-size="14">测试代理</text>
+                        
+                        <rect x="650" y="150" width="120" height="50" rx="8" fill="#764ba2"/>
+                        <text x="710" y="180" text-anchor="middle" fill="white" font-size="14">文档代理</text>
+                        
+                        <!-- 工具层 -->
+                        <rect x="150" y="280" width="150" height="40" rx="8" fill="#48bb78"/>
+                        <text x="225" y="305" text-anchor="middle" fill="white" font-size="14">Claude Code API</text>
+                        
+                        <rect x="350" y="280" width="150" height="40" rx="8" fill="#48bb78"/>
+                        <text x="425" y="305" text-anchor="middle" fill="white" font-size="14">开发工具集成</text>
+                        
+                        <rect x="550" y="280" width="150" height="40" rx="8" fill="#48bb78"/>
+                        <text x="625" y="305" text-anchor="middle" fill="white" font-size="14">版本控制系统</text>
+                        
+                        <!-- 连接线 -->
+                        <line x1="400" y1="80" x2="110" y2="150" stroke="#667eea" stroke-width="2"/>
+                        <line x1="400" y1="80" x2="260" y2="150" stroke="#667eea" stroke-width="2"/>
+                        <line x1="400" y1="80" x2="410" y2="150" stroke="#667eea" stroke-width="2"/>
+                        <line x1="400" y1="80" x2="560" y2="150" stroke="#667eea" stroke-width="2"/>
+                        <line x1="400" y1="80" x2="710" y2="150" stroke="#667eea" stroke-width="2"/>
+                        
+                        <line x1="110" y1="200" x2="225" y2="280" stroke="#764ba2" stroke-width="1"/>
+                        <line x1="260" y1="200" x2="225" y2="280" stroke="#764ba2" stroke-width="1"/>
+                        <line x1="410" y1="200" x2="425" y2="280" stroke="#764ba2" stroke-width="1"/>
+                        <line x1="560" y1="200" x2="425" y2="280" stroke="#764ba2" stroke-width="1"/>
+                        <line x1="710" y1="200" x2="625" y2="280" stroke="#764ba2" stroke-width="1"/>
+                    </svg>
+                </div>
+                
+                <div class="tech-stack">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Claude Code API</span>
+                    <span class="tech-tag">异步处理</span>
+                    <span class="tech-tag">消息队列</span>
+                    <span class="tech-tag">机器学习</span>
+                    <span class="tech-tag">微服务架构</span>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>🚀 使用方法</h2>
+                <h3>安装和配置</h3>
+                <div class="code-block">
+# 克隆仓库
+git clone https://github.com/vanzan01/claude-code-sub-agent-collective.git
+
+# 进入项目目录
+cd claude-code-sub-agent-collective
+
+# 安装依赖
+pip install -r requirements.txt
+
+# 配置环境变量
+cp .env.example .env
+# 编辑 .env 文件，添加必要的配置
+                </div>
+                
+                <h3>基本使用</h3>
+                <div class="code-block">
+from sub_agent_collective import SubAgentCollective
+
+# 初始化集体系统
+collective = SubAgentCollective()
+
+# 创建任务
+task = {
+    "type": "code_analysis",
+    "target": "path/to/code",
+    "requirements": ["performance", "security"]
+}
+
+# 执行任务
+result = collective.execute_task(task)
+
+# 获取结果
+print(result)
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>🔧 核心组件</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>📋 任务管理器</h4>
+                        <p>负责任务的创建、分配、监控和结果收集，确保任务高效执行。</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🔄 代理协调器</h4>
+                        <p>协调各个子代理之间的通信和协作，优化工作流程。</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>💾 知识库</h4>
+                        <p>存储和管理代理间的共享知识，支持学习和经验积累。</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>📈 性能分析器</h4>
+                        <p>分析系统性能指标，提供优化建议和改进方向。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>🎨 应用场景</h2>
+                <ul style="font-size: 1.1rem; margin-left: 20px; line-height: 2;">
+                    <li><strong>代码审查：</strong>多个代理协同进行全面的代码质量检查</li>
+                    <li><strong>性能优化：</strong>分析代码性能瓶颈，提供优化建议</li>
+                    <li><strong>安全审计：</strong>检测潜在的安全漏洞和风险</li>
+                    <li><strong>重构建议：</strong>智能识别重构机会，提供改进方案</li>
+                    <li><strong>文档生成：</strong>自动生成高质量的代码文档</li>
+                    <li><strong>测试覆盖：</strong>生成测试用例，提高代码覆盖率</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2>🤝 贡献指南</h2>
+                <p>
+                    我们欢迎社区贡献！如果你想参与这个项目，可以通过以下方式：
+                </p>
+                <ol style="font-size: 1.1rem; margin-left: 20px; line-height: 2;">
+                    <li>Fork 仓库到你的GitHub账户</li>
+                    <li>创建新的功能分支</li>
+                    <li>提交你的代码更改</li>
+                    <li>创建Pull Request</li>
+                    <li>等待审核和合并</li>
+                </ol>
+            </div>
+            
+            <div class="section">
+                <h2>📝 许可证</h2>
+                <p>
+                    本项目采用MIT许可证，详情请参见LICENSE文件。
+                </p>
+            </div>
+        </div>
+        
+        <footer>
+            <p>&copy; 2024 Claude Code Sub-Agent Collective. 保留所有权利。</p>
+            <p>项目基于Claude Code构建，探索AI代理协同工作的新范式。</p>
+        </footer>
+    </div>
+</body>
+</html>
