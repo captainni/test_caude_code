@@ -1,15 +1,22 @@
 {
   "name": "test_caude_code",
   "version": "1.0.0",
+  "description": "Test project for Claude Code GitHub integration",
   "main": "playwright_search.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "echo \"Linting...\"",
+    "build": "echo \"Building...\"",
+    "lint:fix": "echo \"Fixing linting issues...\""
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "keywords": ["claude", "github", "test"],
+  "author": "captainni",
+  "license": "MIT",
   "dependencies": {
-    "playwright": "^1.54.2"
+    "playwright": "^1.54.2",
+    "express": "^4.18.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0"
   }
 }
